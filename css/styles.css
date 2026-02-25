@@ -1081,22 +1081,57 @@ img {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 2.4rem;
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 80px 0 60px;
+    }
+    
+    .hero .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
     
     .hero-content {
         max-width: 100%;
-        padding: 20px;
+        padding: 0 20px;
         text-align: center;
+        margin: 0 auto;
+    }
+    
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+    
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .hero-buttons {
         justify-content: center;
     }
     
+    /* Show video on mobile - stack below content */
     .hero-video {
-        display: none;
+        display: block;
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 85%;
+        max-width: 400px;
+        margin: 30px auto 0;
+        padding: 0 20px;
+    }
+    
+    .hero-video video {
+        width: 100%;
+        border-width: 4px;
     }
     
     .footer-grid {
@@ -1294,13 +1329,9 @@ input, select, textarea, button {
         max-width: 900px;
     }
     
+    /* Hero uses column layout from 1024px - keep content full width, video centered */
     .hero-content {
-        max-width: 55%;
-    }
-    
-    .hero-video {
-        width: 40%;
-        max-width: 400px;
+        max-width: 100%;
     }
     
     .pricing-grid {
@@ -1334,8 +1365,9 @@ input, select, textarea, button {
         font-size: 2.6rem;
     }
     
+    /* Hero uses column layout - keep content full width */
     .hero-content {
-        max-width: 60%;
+        max-width: 100%;
     }
     
     .service-grid {
@@ -1834,12 +1866,13 @@ input, select, textarea, button {
 
 /* iPad Portrait Specific */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    /* Hero uses column layout - content full width, video centered below */
     .hero-content {
-        max-width: 70%;
+        max-width: 100%;
     }
     
     .hero-video {
-        width: 45%;
+        width: 70%;
         max-width: 380px;
     }
     
