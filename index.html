@@ -409,12 +409,12 @@
     <!-- JavaScript -->
     <script src="js/main.js"></script>
     <script>
-        // Limit hero video to first 3 seconds (loop 0-3 sec only)
+        // Limit hero video to first 7 seconds (loop 0-7 sec only)
         document.addEventListener('DOMContentLoaded', function() {
             var video = document.getElementById('heroVideo');
             if (video) {
                 video.addEventListener('timeupdate', function() {
-                    if (this.currentTime >= 3) {
+                    if (this.currentTime >= 7) {
                         this.currentTime = 0;
                     }
                 });
