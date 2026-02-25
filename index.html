@@ -124,7 +124,7 @@
             </div>
         </div>
         <div class="hero-video">
-            <video autoplay muted loop playsinline poster="assets/storefront.jpg">
+            <video id="heroVideo" autoplay muted loop playsinline poster="assets/storefront.jpg">
                 <source src="assets/_users_37a055a4-f033-4dd8-ab63-da10848ca97a_generated_b608721d-015b-480a-8c98-b2ea616d3d5d_generated_video.MP4" type="video/mp4">
                 <!-- Fallback to image if video doesn't load -->
                 <img src="assets/storefront.jpg" alt="The Groom Room Pet Grooming Salon Richmond VA - Storefront at 5305 W Broad St">
@@ -408,5 +408,18 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script>
+        // Limit hero video to first 3 seconds (loop 0-3 sec only)
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('heroVideo');
+            if (video) {
+                video.addEventListener('timeupdate', function() {
+                    if (this.currentTime >= 3) {
+                        this.currentTime = 0;
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
