@@ -1083,10 +1083,10 @@ img {
 @media (max-width: 1024px) {
     .hero {
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         text-align: center;
-        padding: 80px 0 60px;
+        padding: 24px 0 24px;
     }
     
     .hero .container {
@@ -1105,28 +1105,31 @@ img {
     
     .hero h1 {
         font-size: 2.4rem;
+        margin-bottom: 8px;
     }
     
     .hero p {
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 14px;
     }
     
     .hero-buttons {
         justify-content: center;
+        gap: 12px;
     }
     
-    /* Show video on mobile - stack below content */
+    /* Show video on mobile - stack below content, fills empty space */
     .hero-video {
         display: block;
         position: relative;
         right: auto;
         top: auto;
         transform: none;
-        width: 85%;
-        max-width: 400px;
-        margin: 30px auto 0;
-        padding: 0 20px;
+        width: 95%;
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 0 12px;
     }
     
     .hero-video video {
